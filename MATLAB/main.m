@@ -6,7 +6,7 @@ connection_string = 'USB0::0x2A8D::0x0396::CN59207300::0::INSTR';
 % Read channel 1 through 4
 figure(1)
 hold off
-for channel_number=[1:4]
+for channel_number=[2]
     [time, signal] = Read_Channel_DSOX1204G(channel_number, connection_string);
     plot(time, signal) % time[sec], signal[volts]
     hold on
