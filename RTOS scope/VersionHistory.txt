@@ -1,0 +1,37 @@
+Version history for MATLAB_directSCPI_Examples.
+
+[Version 4.6]
+- Updated VISA_Instrument.m to version 1.9.0:
+    - Added RSNRP sessions supported by R&S VISA 5.11.0 or newer
+- Added examples for R&S NRP-Zxx:
+    - MATLAB_directSCPI_NRPZxx_Example.m
+    - MATLAB_directSCPI_NRPZxx_Trace_Example.m
+
+[Version 4.5]
+- Updated VISA_Instrument.m to version 1.8.0:
+	- Added varargin for passing cmd/query sprintf parameters to the following functions:
+		WriteWithSRQsync
+		QueryWithSRQsync
+		WriteWithSTBpollSync
+		QueryWithSTBpollSync
+		QueryBinaryDataBlock
+		QueryASCII_ListOfDoubles
+
+[Version 4.4]
+- Added transfer of files PC->Instrument and Instrument-> PC in MATLAB_directSCPI_RTB_Example.m
+- Updated VISA_Instrument.m to version 1.7.0:
+	- Session.Clear() in constructor is not performed on SERIAL a SOCKET session.
+	- Added settings for SERIAL session type - termination character enable in constructor
+	- ReadBinaryDataBlock() - reading binary data junk is always done with ReadString(), regardless of the session type
+	- Added QueryBinaryDataToFile() - use it to transfer files from instrument to PC (see function help for example)
+	- Fixed WriteBinaryDataBlock() for SERIAL and SOCKET sessions, added non-mandatory parameter addLFatTheEnd
+
+[Version 4.3]
+- Updated VISA_Instrument.m to version 1.6.0:
+	- Added method WriteWithOPC()
+- Added example for RTH: MATLAB_directSCPI_RTH_Example.m
+
+[Version 4.2]
+- Updated VISA_Instrument.m to version 1.5.0:
+	- Added QueryBinaryDataBlock()
+	- Added WriteBinaryDataBlock()
